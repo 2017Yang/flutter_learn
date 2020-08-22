@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter2_app/shop/pages/CategoryPage.dart';
 
-import 'HomePage.dart';
-import 'CategoryPage.dart';
-import 'MyPage.dart';
-import 'SearchPage.dart';
-import 'ShopCartPage.dart';
+import 'package:flutter2_app/shop/pages/HomePage.dart';
+import 'package:flutter2_app/shop/pages/MyPage.dart';
+import 'package:flutter2_app/shop/pages/SearchPage.dart';
+import 'package:flutter2_app/shop/pages/ShopCartPage.dart';
+
 
 class EntryPage extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class EntryPage extends StatefulWidget {
 
 class _EntryPage extends State<EntryPage>
     with SingleTickerProviderStateMixin {
-  int _currentIndex = 1;
+  int _currentIndex = 0;
   List _pageList=[
     HomePage(),
     CategoryPage(),
@@ -31,10 +32,10 @@ class _EntryPage extends State<EntryPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( //导航栏
+/*      appBar: AppBar( //导航栏
         centerTitle: true,
         title: Text("MAXCO"),
-      ),
+      ),*/
       body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar( // 底部导航
         currentIndex: this._currentIndex,
